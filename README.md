@@ -1,4 +1,4 @@
-# vscode
+# gopls
 
 基于Microsoft Code Server打包的Docker镜像，在原来的基础上增加了以下功能：
 

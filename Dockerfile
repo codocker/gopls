@@ -24,9 +24,6 @@ LABEL description="Gopls镜像，对外提供功能"
 
 
 # 复制文件
-COPY --from=gopls /usr/local/go/bin/go /usr/local/go/bin/go
-COPY --from=gopls /usr/local/go/pkg /usr/local/go/pkg
-COPY --from=gopls /usr/local/go/src /usr/local/go/src
 COPY --from=gopls /go/bin/gopls /usr/bin/gopls
 COPY docker /
 
@@ -46,10 +43,11 @@ RUN set -ex \
 
 
 # 配置环境变量
+ENV PORT 7374
 ENV PATH ${PATH}:/usr/local/go/bin
 ENV GOPATH /var/lib/go
 ENV GO111MODULE on
 ENV GOPROXY https://goproxy.cn,https://mirrors.aliyun.com/goproxy,direct
 
 # 开放端口
-EXPOSE 7374
+EXPOSE ${PORT}

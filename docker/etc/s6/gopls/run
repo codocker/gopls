@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # 启动Gopls
-exec gosu -remote=:7374 -logfile=auto -debug=:0 -rpc.trace
+exec su-exec "${USERNAME}" gopls -listen=":${PORT}" -logfile=auto -debug=:0 -rpc.trace serve
