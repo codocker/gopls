@@ -24,6 +24,7 @@ LABEL description="Gopls镜像，对外提供功能"
 
 
 # 复制文件
+COPY --from=gopls /usr/local/go/bin/go /usr/local/go/bin/go
 COPY --from=gopls /go/bin/gopls /usr/bin/gopls
 COPY docker /
 
