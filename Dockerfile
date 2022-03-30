@@ -38,7 +38,7 @@ RUN set -ex \
   \
   # 增加执行权限
   && chmod +x /etc/s6/gopls/* \
-  && chomd +x /usr/bin/restart \
+  && chmod +x /usr/bin/restart \
   \
   \
   \
