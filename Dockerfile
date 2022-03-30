@@ -50,3 +50,6 @@ ENV PATH ${PATH}:/usr/local/go/bin
 ENV GOPATH /var/lib/go
 ENV GO111MODULE on
 ENV GOPROXY https://goproxy.cn,https://mirrors.aliyun.com/goproxy,direct
+
+# 开放端口
+EXPOSE 7374
