@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# 重启所有Gopls进程
+# shellcheck disable=SC2046
+kill -9 $(pidof gopls)
