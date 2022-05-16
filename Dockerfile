@@ -1,5 +1,5 @@
 # 安装Gopls
-FROM golang:1.18.1-alpine AS gopls
+FROM golang:1.18.2-alpine AS gopls
 
 
 ENV GOPROXY https://goproxy.cn,https://goproxy.io,https://mirrors.aliyun.com/goproxy,direct
